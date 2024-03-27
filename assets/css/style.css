@@ -10,6 +10,7 @@
     154px + (178 - 154) * ((100vw - 1440px) / (1920 - 1440))
   );
   --m-media-container: 240px;
+  --m-sv-container: 240px;
 
   --minus-s: -4px;
   --minus-m: -8px;
@@ -100,6 +101,7 @@ body {
   font-family: "Prompt", sans-serif;
   font-weight: 500;
   color: var(--c-blue);
+  overflow-x: hidden;
 }
 /* HEADER & FOOTER */
 header,
@@ -118,7 +120,6 @@ header ul {
   grid-gap: 2rem;
 }
 header ul li {
-  font-size: calc(18px + (24 - 18) * ((100vw - 767px) / (1440 - 767)));
   text-transform: uppercase;
 }
 header ul li:nth-child(1) {
@@ -134,13 +135,18 @@ main > section {
   padding-inline: var(--m-container);
 }
 /* END: MAIN */
+/* BANNER */
+section[section-data="banner"] {
+  padding: 0;
+}
+/* END: BANNER */
 /* ABOUT */
 section[section-data="about"] {
   padding-block: 5rem;
-  background: var(--bg-default) url("/assets/img/bg/bg-about.jpg");
+  background: center / cover no-repeat url("/assets/img/bg/bg-about.jpg");
 }
 section[section-data="about"] .contxt {
-    padding-right: 1rem;
+  padding-right: 1rem;
   font-size: calc(28px + (36 - 28) * (100vw - 1440px) / (1920 - 1440));
   width: fit-content;
 }
@@ -161,6 +167,49 @@ section[section-data="about"] .contxt h1:after {
   margin-block: 1rem;
 }
 /* END: ABOUT */
+/* SERVICE */
+section[section-data="service"] {
+  padding-top: var(--m-container);
+  padding-inline: 0;
+  background: var(--bg-default) url("/assets/img/bg/bg-service.jpg");
+}
+section[section-data="service"] .row ul li {
+  position: relative;
+}
+section[section-data="service"] .row > div:nth-child(1) ul li:before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+}
+section[section-data="service"] .row > div:nth-child(2) ul li:after {
+  content: "•";
+  position: absolute;
+  right: -1rem;
+}
+/* END: SERVICE */
+/* SERVICE INFO */
+section[section-data="service-info"] {
+  text-align: center;
+  padding: 5rem var(--m-media-container);
+  background: var(--bg-default) url("/assets/img/bg/bg-sv-icon.jpg");
+}
+section[section-data="service-info"] img {
+  max-height: 343px;
+}
+section[section-data="service-info"] p {
+  margin-top: 1rem;
+}
+/* END: SERVICE INFO */
+/* PORTFOLIO */
+section[section-data="portfolio"] {
+  text-align: center;
+  padding: 5rem var(--m-media-container);
+  background: var(--bg-default) url("/assets/img/bg/bg-port.jpg");
+}
+section[section-data="portfolio"] h2 {
+  margin-bottom: 2.5rem;
+}
+/* END: PORTFOLIO */
 /* VIDEO SECTION */
 section[section-data="video"] {
   margin-bottom: -4px;
@@ -169,7 +218,40 @@ section[section-data="video"] {
   background: var(--bg-default) url("/assets/img/bg/bg-vdo.jpg");
 }
 /* END: VIDEO SECTION */
+/* CONTACT */
+section[section-data="contact"] {
+  padding: var(--m-container);
+  background: var(--bg-default) url("/assets/img/bg/bg-contact.jpg");
+}
+section[section-data="contact"] .contact-info {
+  margin: auto 0 auto 6rem;
+}
+section[section-data="contact"] .qr img {
+  max-width: 383px;
+}
+section[section-data="contact"] ul li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 0.5rem;
+}
+section[section-data="contact"] ul li .icon {
+  width: 100%;
+  max-width: 3rem;
+}
+/* END: CONTACT */
+/* ANIMATION */
+section {
+  transition: var(--transition);
+}
+/* END: ANIMATION */
 /* GLOBAL */
+button {
+  max-width: 1.5rem;
+  background: transparent;
+  border: 0;
+  margin: 1rem;
+}
 .heading {
   font-size: calc(34px + (40 - 34) * ((100vw - 1199px) / (1440 - 1199)));
   text-transform: uppercase;
@@ -181,6 +263,10 @@ section[section-data="video"] {
 .row > div {
   padding: 0;
 }
+.row {
+  margin: 0;
+  width: 100%;
+}
 .media-wrapper {
   position: relative;
   width: 100%;
@@ -189,5 +275,43 @@ section[section-data="video"] {
 .media-wrapper > *:is(img, video) {
   width: 100%;
   height: 100%;
+}
+.left-ctn {
+  padding-left: var(--m-sv-container) !important;
+}
+.right-ctn {
+  padding-right: var(--m-sv-container) !important;
+  text-align: end;
+}
+.tag {
+  width: fit-content;
+  font-size: calc(24px + (32 - 24) * ((100vw - 1024px) / (1440 - 1024)));
+  color: var(--c-white);
+  background: var(--c-blue);
+  padding: 0.75rem 2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  border-radius: 1.25rem;
+}
+.m-menu {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(67, 102, 122, 0.9);
+  color: var(--c-white);
+  text-transform: uppercase;
+  font-size: 2rem;
+  transition: height var(--transition);
+}
+.m-menu ul {
+  padding: 0;
+  text-align: center;
+}
+.m-menu .wrapper {
+  width: 100%;
+  height: 100%;
+}
+.m-menu.active {
+  display: flex !important;
 }
 /* END: GLOBAL */

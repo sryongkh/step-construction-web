@@ -36,11 +36,28 @@
     <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
   <body>
-    <header>
+    <div class="m-menu position-fixed start-0 z-2">
+      <button id="close-btn" class="position-fixed end-0">
+        <img src="/assets/img/close.svg" alt="" />
+      </button>
+      <div class="wrapper d-flex align-items-center">
+        <ul class="m-auto">
+          <li><a href="#">home</a></li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">service</a></li>
+          <li><a href="#">portfolio</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <header class="z-1">
       <div class="d-flex flex-row justify-content-between align-items-center">
         <a href="#">
           <img src="/assets/img/logo.png" alt="" class="logo" />
         </a>
+        <button id="menu-btn" class="d-block d-md-none">
+          <img src="assets/img/menu.svg" alt="" />
+        </button>
         <ul class="d-flex my-5 d-none d-md-flex">
           <li><a href="#">home</a></li>
           <li><a href="#">about</a></li>
@@ -50,7 +67,12 @@
         </ul>
       </div>
     </header>
-    <main>
+    <main class="z-0">
+      <section section-data="banner">
+        <div class="media-wrapper">
+          <img src="/assets/img/banner_cover.jpg" alt="" class="img-fluid" />
+        </div>
+      </section>
       <section section-data="about" class="d-flex justify-content-xl-between">
         <div class="container-fluid">
           <div class="row d-flex justify-content-between align-items-center">
@@ -77,23 +99,90 @@
         </div>
       </section>
       <section section-data="service">
-        <div></div>
-        <div></div>
+        <div class="row">
+          <div
+            class="left-ctn col-lg-6 d-flex flex-column justify-content-center"
+          >
+            <div class="tag">service 1</div>
+            <ul class="txt-body ps-3">
+              <li>ออกแบบบ้านตามโจทย์ความต้องการของผู้อยู่อาศัย</li>
+              <li>เราใส่ใจทุกรายละเอียดการก่อสร้าง</li>
+              <li>ออกแบบบ้านให้เหมาะสม กับ Lifestyle</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="media-wrapper">
+              <img src="/assets/img/service/service-img-1.webp" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="media-wrapper">
+              <img src="/assets/img/service/service-img-2.webp" alt="" />
+            </div>
+          </div>
+          <div
+            class="right-ctn col-lg-6 d-flex flex-column justify-content-center py-4"
+          >
+            <div class="tag ms-auto">service 2</div>
+            <ul class="txt-body pe-3">
+              <li>สร้างตามงบ จบตรงกำหนดเวลา</li>
+              <li>ฟรีออกแบบ เขียนแบบ เพื่อยื่นกู้กับธนาคาร</li>
+              <li>มีรับประกันผลงานหลังการก่อสร้าง</li>
+            </ul>
+          </div>
+        </div>
       </section>
-      <section section-data="service-info"></section>
+      <section section-data="service-info">
+        <div class="row row-gap-5">
+          <!-- Service Icon Item -->
+        </div>
+      </section>
       <section section-data="portfolio">
-        <h2 class="heading"></h2>
+        <h2 class="heading">portfolio</h2>
+        <div class="row row-gap-5">
+          <!-- Port Item -->
+        </div>
       </section>
       <section section-data="video">
         <div class="media-wrapper">
-          <video width="100%" height="100%" autoplay loop>
+          <video width="100%" height="100%" autoplay loop muted>
             <source src="/assets/video/video.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
-      <section section-data="contact"></section>
+      <section section-data="contact">
+        <div
+          class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center"
+        >
+          <div class="qr">
+            <img src="/assets/img/contact/qr_code.jpg" alt="" />
+          </div>
+          <ul class="contact-info txt-body">
+            <li>
+              <img src="/assets/img/contact/tel.png" alt="/" class="icon" />
+              <a href="tel:0872525889">087-2525889</a>
+            </li>
+            <li>
+              <img src="/assets/img/contact/fb.png" alt="/" class="icon" />
+              <p>สร้างบ้าน บ้านสวย โดย สเตป คอนสตรัคชั่น 2020 จำกัด</p>
+            </li>
+            <li>
+              <img src="/assets/img/contact/line.png" alt="/" class="icon" />
+              <p>@0872525889</p>
+            </li>
+            <li>
+              <img src="/assets/img/contact/mail.png" alt="/" class="icon" />
+              <a href="Yongyut_kr@hotmail.com">Yongyut_kr@hotmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-    <footer class="d-flex justify-content-center align-items-center py-4">
+    <footer
+      class="d-flex justify-content-center justify-content-center align-items-center py-4"
+    >
       &#169; Copyright 2023 . All Rights Reserved
     </footer>
     <!-- JS -->
