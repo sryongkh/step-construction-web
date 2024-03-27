@@ -1,0 +1,94 @@
+@media (min-width: 1399.98px) {
+  /* ABOUT */
+  main > section {
+    padding-inline: var(--m-container-fluid);
+  }
+  section[section-data="about"] .contxt p {
+    max-width: 782px;
+  }
+  /* END: ABOUT */
+  /* GLOBAL */
+  .txt-body {
+    font-size: 2rem;
+  }
+  /* END: GLOBAL */
+}
+@media (min-width: 1199.98px) {
+}
+@media (min-width: 1023.98px) {
+}
+@media (min-width: 991.98px) {
+}
+@media (min-width: 767.98px) {
+}
+@media (min-width: 575.98px) {
+}
+
+@media (max-width: 1399.98px) {
+  footer {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1199.98px) {
+  :root {
+    --m-container: 112px;
+  }
+  section[section-data="about"] .contxt h1:after {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 1023.98px) {
+  section[section-data="video"] {
+    margin-bottom: var(--minus-m);
+    padding: 0;
+  }
+}
+@media (max-width: 991.98px) {
+  header ul {
+    grid-gap: 1rem;
+  }
+  header ul li {
+    font-size: 1rem;
+  }
+  /* ABOUT */
+  section[section-data="about"] .contxt h1:after {
+    width: 1rem;
+    height: 1rem;
+  }
+  /* END: ABOUT */
+}
+@media (max-width: 767.98px) {
+  :root {
+    --m-container: 4rem;
+  }
+  header {
+    padding-inline: var(--m-container);
+  }
+  header .logo {
+    max-height: 2.5rem;
+  }
+  /* ABOUT */
+  section[section-data="about"] .contxt {
+    margin-bottom: 1rem;
+  }
+  /* END: ABOUT */
+  /* GLOBAL */
+  .heading {
+    font-size: 2rem;
+  }
+  .txt-body {
+    font-size: 1rem;
+  }
+  /* END: GLOBAL */
+}
+@media (max-width: 575.98px) {
+  :root {
+    --m-container: 1.5rem;
+  }
+  header,
+  footer {
+    padding-inline: var(--m-container);
+    font-size: 1rem;
+  }
+}
