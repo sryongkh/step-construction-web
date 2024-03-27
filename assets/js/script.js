@@ -47,13 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.getElementById("menu-btn");
   const closeBtn = document.getElementById("close-btn");
   const menu = document.querySelector(".m-menu");
-
-  // Toggle menu on menu button click
   menuBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
   });
-
-  // Close menu on close button click
   closeBtn.addEventListener("click", () => {
     menu.classList.remove("active");
   });

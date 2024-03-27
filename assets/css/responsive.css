@@ -1,5 +1,6 @@
 @media (min-width: 1399.98px) {
-  header ul li, footer {
+  header ul li,
+  footer {
     font-size: 1rem;
   }
   /* ABOUT */
@@ -81,6 +82,9 @@
   header .logo {
     max-height: 2.5rem;
   }
+  section[section-data="banner"] {
+    margin-top: 71px;
+  }
   /* ABOUT */
   section[section-data="about"] .contxt {
     margin-bottom: 2rem;
@@ -114,14 +118,14 @@
   header,
   footer {
     padding-inline: var(--m-container);
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   section[section-data="service"] {
     background-position: bottom;
   }
   section[section-data="contact"] .contact-info {
     margin: 0;
-    padding: var(--m-container);
+    padding: 0;
   }
   .left-ctn,
   .right-ctn {

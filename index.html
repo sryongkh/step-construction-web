@@ -50,7 +50,7 @@
         </ul>
       </div>
     </div>
-    <header class="z-1">
+    <header class="z-1 position-fixed top-0 start-0">
       <div class="d-flex flex-row justify-content-between align-items-center">
         <a href="#">
           <img src="/assets/img/logo.png" alt="" class="logo" />
@@ -58,12 +58,12 @@
         <button id="menu-btn" class="d-block d-md-none">
           <img src="assets/img/menu.svg" alt="" />
         </button>
-        <ul class="d-flex my-5 d-none d-md-flex">
+        <ul class="d-flex my-4 d-none d-md-flex">
           <li><a href="#">home</a></li>
-          <li><a href="#">about</a></li>
-          <li><a href="#">service</a></li>
-          <li><a href="#">portfolio</a></li>
-          <li><a href="#">contact</a></li>
+          <li><a href="#about">about</a></li>
+          <li><a href="#service">service</a></li>
+          <li><a href="#portfolio">portfolio</a></li>
+          <li><a href="#contact">contact</a></li>
         </ul>
       </div>
     </header>
@@ -73,7 +73,7 @@
           <img src="/assets/img/banner_cover.jpg" alt="" class="img-fluid" />
         </div>
       </section>
-      <section section-data="about" class="d-flex justify-content-xl-between">
+      <section section-data="about" id="about" class="d-flex justify-content-xl-between">
         <div class="container-fluid">
           <div class="row d-flex justify-content-between align-items-center">
             <div class="col-md-7 col-xxl-8">
@@ -98,7 +98,7 @@
           </div>
         </div>
       </section>
-      <section section-data="service">
+      <section section-data="service" id="service">
         <div class="row">
           <div
             class="left-ctn col-lg-6 d-flex flex-column justify-content-center"
@@ -139,7 +139,7 @@
           <!-- Service Icon Item -->
         </div>
       </section>
-      <section section-data="portfolio">
+      <section section-data="portfolio" id="portfolio">
         <h2 class="heading">portfolio</h2>
         <div class="row row-gap-5">
           <!-- Port Item -->
@@ -152,7 +152,7 @@
           </video>
         </div>
       </section>
-      <section section-data="contact">
+      <section section-data="contact" id="contact">
         <div
           class="d-flex flex-column flex-md-row gap-4 justify-content-center align-items-center"
         >
@@ -178,6 +178,17 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section section-data="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81303.49873148317!2d138.56929398961861!3d-34.95734799519047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ab0c53c8a1e29cf%3A0xf03365545b8f0f0!2z4LiX4LmI4Liy4Lit4Liy4LiB4Liy4Lio4Lii4Liy4LiZ4LmB4Lit4LiU4Li04LmA4Lil4LiU!5e0!3m2!1sth!2sth!4v1711555961733!5m2!1sth!2sth"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
     </main>
     <footer
